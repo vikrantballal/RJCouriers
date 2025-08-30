@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Package - RJCouriers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tracking.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>RJCouriers</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tracking.html" class="nav-link active">Track Package</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="booking.html" class="nav-link">Book Delivery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2 class="form-title">Track Your Package</h2>
+            <form id="trackingForm">
+                <div class="form-group">
+                    <label for="trackingNumber">Enter Tracking Number</label>
+                    <input type="text" id="trackingNumber" name="trackingNumber" placeholder="e.g., RJ12345678" required>
+                </div>
+                <button type="submit" class="form-button">Track Package</button>
+            </form>
+
+            <div id="trackingResult" class="tracking-result hidden">
+                <h3>Package Status: <span id="packageStatus"></span></h3>
+                <div class="tracking-info">
+                    <div class="info-group">
+                        <h4>Sender Information</h4>
+                        <p id="senderInfo"></p>
+                    </div>
+                    <div class="info-group">
+                        <h4>Recipient Information</h4>
+                        <p id="recipientInfo"></p>
+                    </div>
+                    <div class="info-group">
+                        <h4>Package Details</h4>
+                        <p id="packageDetails"></p>
+                    </div>
+                </div>
+
+                <h4>Tracking History</h4>
+                <div id="trackingHistory" class="tracking-history">
+                    <!-- Tracking events will be inserted here -->
+                </div>
+            </div>
+
+            <div id="noResult" class="no-result hidden">
+                <p>No package found with that tracking number. Please check the number and try again.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>RJCouriers</h3>
+                <p>Fast, reliable and secure package delivery services.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="booking.html">Book Delivery</a></li>
+                    <li><a href="tracking.html">Track Package</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@rjcouriers.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Delivery Street, City, Country</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 RJCouriers. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="tracking.js"></script>
+</body>
+</html>

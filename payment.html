@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - RJCouriers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>RJCouriers</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tracking.html" class="nav-link">Track Package</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="booking.html" class="nav-link">Book Delivery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2 class="form-title">Payment</h2>
+            
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div id="orderDetails">
+                    <!-- Order details will be inserted here -->
+                </div>
+            </div>
+
+            <form id="paymentForm">
+                <h3>Payment Method</h3>
+                <div class="payment-methods">
+                    <div class="payment-method">
+                        <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" checked>
+                        <label for="creditCard">Credit Card</label>
+                    </div>
+                    <div class="payment-method">
+                        <input type="radio" id="paypal" name="paymentMethod" value="paypal">
+                        <label for="paypal">PayPal</label>
+                    </div>
+                    <div class="payment-method">
+                        <input type="radio" id="bankTransfer" name="paymentMethod" value="bankTransfer">
+                        <label for="bankTransfer">Bank Transfer</label>
+                    </div>
+                </div>
+
+                <div id="creditCardForm">
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiryDate">Expiry Date</label>
+                            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardholderName">Cardholder Name</label>
+                        <input type="text" id="cardholderName" name="cardholderName" required>
+                    </div>
+                </div>
+
+                <div id="paypalForm" class="hidden">
+                    <p>You will be redirected to PayPal to complete your payment.</p>
+                </div>
+
+                <div id="bankTransferForm" class="hidden">
+                    <p>Please transfer the amount to our bank account:</p>
+                    <p><strong>Bank:</strong> RJCouriers Bank<br>
+                    <strong>Account Number:</strong> 1234 5678 9012 3456<br>
+                    <strong>Routing Number:</strong> 021000021<br>
+                    <strong>Reference:</strong> <span id="bankReference"></span></p>
+                </div>
+
+                <button type="submit" class="form-button">Complete Payment</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>RJCouriers</h3>
+                <p>Fast, reliable and secure package delivery services.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="booking.html">Book Delivery</a></li>
+                    <li><a href="tracking.html">Track Package</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@rjcouriers.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Delivery Street, City, Country</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 RJCouriers. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="payment.js"></script>
+</body>
+</html>
